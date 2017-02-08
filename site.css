@@ -1,0 +1,233 @@
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	padding: 0;
+	margin: 0;
+	height: 100%;
+	font-family: Arial;
+}
+
+.site-content {
+	height: 100%;
+	position: relative;
+}
+.top-bar {
+	height: 150px;
+	border-bottom: 5px solid #30e8eb;
+}
+.main-content {
+	height: calc(100% - 150px);
+	background: url(images/desktopBG.jpg) no-repeat;
+	background-size: 100% 100%;
+	position: relative;
+}
+
+.main-content .page-title {
+	color: #ffffff;
+    text-transform: uppercase;
+    font-size: 36px;
+    position: absolute;
+    left: 0;
+    bottom: 45px;
+    padding-left: 10px;
+}
+.main-content small {
+	margin-top: 10px;
+    background-color: #0a1717;
+    color: #2abcbc;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.img-logo {
+	margin-left: 50px;
+    margin-top: 20px;
+    margin-right: 5px;
+    border: 1px solid #cec8c8;
+    width: 250px;
+    float: left;
+    z-index: 10;
+    position: relative;
+}
+ul.list-no-style {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+ul.button-list li {
+	float: left;
+    border: 1px solid #221f1f;
+    margin: 10px;
+    width: 170px;
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #221f1f;
+    margin-top: 80px;
+}
+ul.button-list li.active {
+	background-color: #30e8eb;
+	border-color: #30e8eb;
+	color: #ffffff;
+}
+
+ul.share-button-list {
+	position: absolute;
+	top: 0;
+	right: 315px;
+}
+ul.share-button-list li {
+	float: left;
+    height: 50px;
+    width: 40px;
+    background-color: #333333;
+    color: #30e8eb;
+    margin-right: 7px;
+    text-align: center;
+    padding-top: 15px;
+    font-size: 26px;
+}
+
+.countdown {
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 220px;
+	width: 310px;
+	background-color: #30e8eb;
+}
+
+.countdown .box-40k {
+	width: 90px;
+    height: 90px;
+    line-height: 90px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #333333;
+    font-size: 30px;
+    border: 1px solid #1d1d1b;
+    border-radius: 50%;
+	-webkit-box-shadow: 0px 0px 6px 2px #ffffff;
+	-moz-box-shadow: 0px 0px 6px 2px #ffffff;
+	box-shadow: 0px 0px 6px 2px #ffffff;
+	position: absolute;
+	right: 20px;
+	top: 10px;
+}
+
+.countdown .countdown-title {
+	color: #221f1f;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin-top: 50px;
+    margin-left: 15px;
+}
+.countdown .date {
+	color: #ebfcfc;
+    text-transform: uppercase;
+    font-size: 26px;
+    margin-top: -5px;
+}
+
+.countdown .counter {
+	margin-top: 20px;
+}
+
+.countdown .counter .number-list {
+	margin-left: 20px;
+}
+
+.countdown .counter .number-list li {
+	float: left;
+    color: #ffffff;
+    font-size: 60px;
+    border-bottom: 3px solid #221f1f;
+    text-align: center;
+    margin-right: 5px;
+}
+.countdown .counter .number-list li.delimiter {
+	border-bottom: none;
+	width: 20px;
+}
+.countdown .counter .caption-list {
+	clear: both;
+	margin-left: 20px;
+}
+.countdown .counter .caption-list li {
+	font-size: 14px;
+	color: #ffffff;
+	text-align: center;
+	float: left;
+	width: 67px;
+	margin-right: 5px;
+	margin-top: 5px;
+}
+
+.countdown .counter .caption-list li.delimiter {
+	width: 20px;
+	height: 1px;
+}
+
+.aboutbtn a{
+    color: inherit;
+     text-decoration: inherit;
+}
+
+.aboutbtn:hover{
+    background-color:#30e8eb;
+    border-color: white;
+    color: white;
+}
+
+#rtlAbout, .thanks{
+    direction:rtl;
+}
+
+#ltrAbout{
+    direction:ltr;
+}
+
+.container, .container-fluid{
+    padding: 30px;
+}
+
+
+.about{
+    margin: 30px 15px 15px 15px;
+	font-size: 24px;
+	margin-top: 100px;
+	text-align: left;
+	 border-bottom: 5px solid #30e8eb;
+	width: 15%;
+    font-weight: bold;
+}
+
+.distanceGoal, .startLine {
+	text-transform: uppercase;
+	font-size: 200%;
+
+}
+
+.startLine{
+	color:#30e8eb;
+	padding-bottom:10px;
+}
+
+
+.footerLogos img{
+    width: 15%;
+    padding: 5px;
+}
+
+
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+	background: url(images/mobileBG.jpg) no-repeat;
+}
