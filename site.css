@@ -14,15 +14,16 @@ html, body {
 	position: relative;
 }
 .top-bar {
-	height: 150px;
+	height: 180px;
 	border-bottom: 5px solid #30e8eb;
 }
 .main-content {
 	height: calc(100% - 150px);
 	background: url(images/desktopBG.jpg) no-repeat;
-	background-size: 100% 100%;
-	position: relative;
+		background-size: 100% 100%;
+		position: relative;
 }
+
 
 .main-content .page-title {
 	color: #ffffff;
@@ -46,11 +47,11 @@ html, body {
 }
 
 .img-logo {
-	margin-left: 50px;
-    margin-top: 20px;
+	margin-left: 15px;
+    margin-top: 15px;
     margin-right: 5px;
     border: 1px solid #cec8c8;
-    width: 250px;
+    width: 13%;
     float: left;
     z-index: 10;
     position: relative;
@@ -62,6 +63,7 @@ ul.list-no-style {
 }
 
 ul.button-list li {
+	font-size:17px;
 	float: left;
     border: 1px solid #221f1f;
     margin: 10px;
@@ -94,6 +96,10 @@ ul.share-button-list li {
     text-align: center;
     padding-top: 15px;
     font-size: 26px;
+}
+
+ul.share-button-list a{
+    text-decoration: none;
 }
 
 .countdown {
@@ -176,12 +182,12 @@ ul.share-button-list li {
 	height: 1px;
 }
 
-.aboutbtn a{
+.aboutbtn a , .myLine a , .allLines a{
     color: inherit;
-     text-decoration: inherit;
+    text-decoration: inherit;
 }
 
-.aboutbtn:hover{
+.aboutbtn:hover, .allLinesbtn:hover, .myLinebtn:hover{
     background-color:#30e8eb;
     border-color: white;
     color: white;
@@ -195,17 +201,15 @@ ul.share-button-list li {
     direction:ltr;
 }
 
-.container, .container-fluid{
-    padding: 30px;
+.bold{
+	font-weight: bold;
 }
-
-
 .about{
     margin: 30px 15px 15px 15px;
 	font-size: 24px;
 	margin-top: 100px;
 	text-align: left;
-	 border-bottom: 5px solid #30e8eb;
+	border-bottom: 	5px solid #30e8eb;
 	width: 15%;
     font-weight: bold;
 }
@@ -227,7 +231,45 @@ ul.share-button-list li {
     padding: 5px;
 }
 
-
-@media only screen and (min-width : 320px) and (max-width : 480px) {
-	background: url(images/mobileBG.jpg) no-repeat;
+.footerImg img{
+	margin-top: 30px;
+    height: auto; 
+    width: 100%; 
+	background-size: 100% 100%;
+	position: relative;
 }
+
+.sneakPeak{
+	text-transform: uppercase;
+	font-size: 300%;
+	font-weight: bold;	
+	position: relative;	
+	height:calc(100% - 150px);
+	text-align: center;
+	margin-top: 100px;
+}
+
+  @media only screen and (max-device-width: 489px) {
+	.main-content{
+		background: url(images/mobileBG.png) no-repeat;
+		height:calc(100% - 150px);
+		background-size: 100% 100%;
+		position: relative;
+		}
+}
+
+  @media only screen and (max-device-width: 489px) {
+ul.button-list li {
+	float: left;
+    border: 1px solid #221f1f;
+    margin: 10px;
+	padding: 2px;
+    width: 155px;
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #221f1f;
+    margin-top: 80px;
+}
+  }
