@@ -14,8 +14,11 @@ html, body {
 	position: relative;
 }
 .top-bar {
+	margin: 0 0;
 	height: 180px;
-	border-bottom: 5px solid #30e8eb;
+
+    	border-bottom: 5px solid #30e8eb;
+
 }
 .main-content {
 	height: calc(100% - 150px);
@@ -35,6 +38,7 @@ html, body {
     padding-left: 10px;
 }
 .main-content small {
+	z-index:1000;
 	margin-top: 10px;
     background-color: #0a1717;
     color: #2abcbc;
@@ -51,10 +55,11 @@ html, body {
     margin-top: 15px;
     margin-right: 5px;
     border: 1px solid #cec8c8;
-    width: 13%;
+    width: 75%;
     float: left;
     z-index: 10;
-    position: relative;
+    position: absolute;
+	margin-rigth: 50px;
 }
 ul.list-no-style {
 	margin: 0;
@@ -63,13 +68,13 @@ ul.list-no-style {
 }
 
 ul.button-list li {
-	font-size:17px;
+	list-style-type: none;
+	font-size:15px;
 	float: left;
     border: 1px solid #221f1f;
     margin: 10px;
-    width: 170px;
-    height: 55px;
-    line-height: 55px;
+    width: 150px;
+    line-height: 50px;
     text-align: center;
     text-transform: uppercase;
     color: #221f1f;
@@ -84,7 +89,7 @@ ul.button-list li.active {
 ul.share-button-list {
 	position: absolute;
 	top: 0;
-	right: 315px;
+	right: 375px;
 }
 ul.share-button-list li {
 	float: left;
@@ -104,14 +109,18 @@ ul.share-button-list a{
 
 .countdown {
 	position: absolute;
-	right: 0;
+	right: 15px;
 	top: 0;
-	height: 220px;
-	width: 310px;
+	width: 370px;
 	background-color: #30e8eb;
+	z-index: 1000;
 }
 
+.indexCount{
+	height: 220px;
+}
 .countdown .box-40k {
+    padding-bottom:10px;
 	width: 90px;
     height: 90px;
     line-height: 90px;
@@ -143,9 +152,6 @@ ul.share-button-list a{
     margin-top: -5px;
 }
 
-.countdown .counter {
-	margin-top: 20px;
-}
 
 .countdown .counter .number-list {
 	margin-left: 20px;
@@ -154,7 +160,7 @@ ul.share-button-list a{
 .countdown .counter .number-list li {
 	float: left;
     color: #ffffff;
-    font-size: 60px;
+    font-size: 50px;
     border-bottom: 3px solid #221f1f;
     text-align: center;
     margin-right: 5px;
@@ -172,7 +178,7 @@ ul.share-button-list a{
 	color: #ffffff;
 	text-align: center;
 	float: left;
-	width: 67px;
+	width: 56px;
 	margin-right: 5px;
 	margin-top: 5px;
 }
@@ -193,12 +199,18 @@ ul.share-button-list a{
     color: white;
 }
 
-#rtlAbout, .thanks{
+
+#rtlAbout{
     direction:rtl;
 }
 
 #ltrAbout{
     direction:ltr;
+}
+
+.thanks{
+    direction:rtl;
+	margin-left:25%;
 }
 
 .bold{
@@ -214,6 +226,16 @@ ul.share-button-list a{
     font-weight: bold;
 }
 
+.thanksTitle{
+	margin-left: 100px;
+	font-size: 24px;
+	margin-top: 100px;
+	text-align: left;
+	border-bottom: 	5px solid #30e8eb;
+	width: 35%;
+    font-weight: bold;
+}
+
 .distanceGoal, .startLine {
 	text-transform: uppercase;
 	font-size: 200%;
@@ -226,13 +248,20 @@ ul.share-button-list a{
 }
 
 
+.footerLogos{
+    margin-left: 100px;
+}
+
 .footerLogos img{
     width: 15%;
     padding: 5px;
 }
 
+.logoWrapper{
+	float: rigth;	
+}
+
 .footerImg img{
-	margin-top: 30px;
     height: auto; 
     width: 100%; 
 	background-size: 100% 100%;
@@ -249,27 +278,86 @@ ul.share-button-list a{
 	margin-top: 100px;
 }
 
+#shecodesFooter{
+	text-align: center;
+	margin-top: 25px;
+	font-weight: bold;
+    line-height: 1.5;
+    text-align: left;
+	padding-left: 10px;
+
+}
+
+#shecodesImg {
+	width: 150px;
+}
+
   @media only screen and (max-device-width: 489px) {
 	.main-content{
 		background: url(images/mobileBG.png) no-repeat;
 		height:calc(100% - 150px);
 		background-size: 100% 100%;
 		position: relative;
-		}
+	}
 }
 
   @media only screen and (max-device-width: 489px) {
-ul.button-list li {
-	float: left;
-    border: 1px solid #221f1f;
-    margin: 10px;
-	padding: 2px;
-    width: 155px;
-    height: 55px;
-    line-height: 55px;
-    text-align: center;
+	.main-content .page-title {
+	color: #ffffff;
     text-transform: uppercase;
-    color: #221f1f;
-    margin-top: 80px;
+    font-size: 36px;
+    position: absolute;
+    left: 0;
+    bottom: 45px;
+    padding-left: 10px;
+	}
 }
-  }
+
+  @media only screen and (max-device-width: 489px) {
+	.main-content small{
+		position: absolute;
+	}
+
+}
+
+@media only screen and (max-device-width: 489px) {
+    .img-logo {
+	margin-left: 15px;
+    margin-top: 37px;
+    margin-right: 5px;
+    border: 1px solid #cec8c8;
+    width: 75%;
+    float: left;
+    z-index: 10;
+    position: absolute;
+	margin-rigth: 50px;
+}
+}
+
+@media only screen and (max-device-width: 489px) {
+.countdown {
+	position: absolute;
+	right: 15px;
+	top: 0;
+	width: 370px;
+	background-color: #30e8eb;
+	z-index: 1000;
+}
+}
+
+  @media only screen and (max-device-width: 489px) {
+	ul.button-list li {
+		float: left;
+		border: 1px solid #221f1f;
+		margin: 5px;
+		padding: 2px;
+        font-size: 85%;
+		width: 95%;
+		height: 55px;
+		line-height: 55px;
+		text-align: center;
+		text-transform: uppercase;
+		color: #221f1f;
+		margin-top: 80px;
+	}
+ }
